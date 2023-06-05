@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: white;
+    max-width: 1440px;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    background: linear-gradient(249deg, rgba(77,149,89,1) 0%, rgba(56,112,61,1) 28.53%, rgba(19,57,23,1) 75.52%); 
+}
+.bold{
+    font-weight: bold;
+}
+button{
+    border: none;
+    background-color: white;
+}
+h1{
+    font-family: Permanent Marker;
+}
+button{
+    border: 1px;
+    border-radius: 25px;
+    padding: 10px 15px;
+    background-color: #69c278;
+    color: white;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 25px ;
+    margin: 0 25px;
+}
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    font-size: 120%;
+}
+.intro{
+
+    margin-left: 100px;
+    width: 45vw;
+}
+h1{
+    font-size: 15vh;
+    margin: 0;
+}
+h4{
+    font-size: 20px;
+    margin: 0;
+}
+h5{
+    font-size: 18px;
+    margin: 100px 0 30px 0;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.lastButton{
+    padding: 9px 10px;
+}
+.buttons{
+    margin: 10px;
+}
+p{
+    max-width: 70%;
+    line-height: 5vh;
+}
+
+img{
+    width: 39vw;
+}
+.leftBanner{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -50px;
+    bottom: 150px;
+    height: 20vh;
+    justify-content: space-around;
+}
+footer > button{
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+}
+
+
+
+/* Responsive tablet */
+@media (max-width: 1023px) {
+    
+}
+
+/* Responsive mobile */
+@media (max-width: 767px){
+
+}
