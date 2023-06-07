@@ -10,6 +10,10 @@
       visibility: visible;
     }
 }
+a{
+    text-decoration: none;
+    color: #f4f4f4f4;
+}
 body{
     margin-top: 20px auto 0;
     color: white;
@@ -35,13 +39,15 @@ h5{
     margin: 10px 25px 0 0;
     margin: 20px 0 40px;
 }
+/* HEADER */
+
 header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     height: 25px ;
-    margin: 10px 25px 40px 0;
+    margin: 10px 25px 70px 0;
     animation: slide 2s 0s;
 }
 .logo{
@@ -140,6 +146,9 @@ p{
 
 /* Responsive tablet */
 @media (max-width: 1023px) {
+    .intro{
+        margin-top: 40px;
+    }
     h1{
         font-size: 70px;
     }
@@ -148,7 +157,7 @@ p{
     }
     h5{
         font-size: 15px;
-        margin-top: 50px;
+        margin-top: 20px;
     }
     nav{
         font-size: 100%;
@@ -156,11 +165,68 @@ p{
     p{
         margin: 30px 0 15px;
     }
+    button {      
+        margin:18px 8px;
+    }
+    .buttons{
+        margin:15px 7px;
+        font-size: 13px;
+    }
+    .watchButton{
+        padding: 8px 20px 10px 12px;
+    }
+    .watchIcon{
+        height: 13px;
+        width: 13px;
+    }
 }
 
 /* Responsive mobile */
 @media (max-width: 767px){
-
+    .intro{
+        width: 70vw;
+        margin-left: 50px;
+    }
+    .goblin{
+        width: 70vw;
+    }
+    .leftBanner{
+        display: none;
+    }
+    nav{
+        opacity: 0;
+        position: absolute;
+        right: 5px;
+        top: 40px;
+        width: 30vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        >*
+            border: solid 1px;
+            font-weight: normal;
+            justify-content: center;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        display: none;
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-top: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    footer{
+        display: none;        
+    }
 }
 
 
