@@ -11,10 +11,18 @@ body{
 .bold{
     font-weight: bold;
 }
-button{
-}
 h1{
     font-family: Permanent Marker;
+    margin: 0;
+    font-size: 80px;
+}
+h4{
+    font-size: 20px;
+    margin: 0;
+}
+h5{
+    font-size: 18px;
+    margin: 20px 0 40px;
 }
 header{
     display: flex;
@@ -22,7 +30,7 @@ header{
     justify-content: space-between;
     width: 100%;
     height: 25px ;
-    margin: 10px 25px 20px 0;
+    margin: 10px 25px 0 0;
 }
 .logo{
     font-size: 30px;
@@ -36,34 +44,33 @@ nav{
     width: 60%;
     font-size: 120%;
 }
-h1{
-    font-size: 100px;
-    margin: 5px 0;
+nav > span{
+    cursor: pointer;
 }
-h4{
-    font-size: 20px;
-    margin: 0;
-}
-h5{
-    font-size: 18px;
-    margin: 80px 0 50px 0;
+nav > span:hover{
+    border-bottom: solid 4px #f4f4f4f4;
 }
 button{
-    border: none;
+    border: solid 1px white;
     border-radius: 25px;
     padding: 12px 25px 12px 20px;
-    background-color: rgba(56,112,61,1);
+    background-color: transparent;
     color: white;
+    cursor: pointer;
 }
-/* Main container */
+button:hover{
+    border: none;
+    background-color: rgba(56,112,61,1);
+}
 
+/* Main container */
 main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .intro{
-
+    margin-top: 80px;
     margin-left: 80px;
     width: 40vw;
 }
@@ -78,7 +85,6 @@ p{
     line-height: 5vh;
     margin: 40px 0 20px; 
 }
-
 img{
     width: 45vw;
     margin-top: 30px;
@@ -93,18 +99,25 @@ img{
     height: 150px;
     justify-content: space-around;
 }
-.leftBanner > span{
-    font-size: 30px;
+.leftButton{
+    cursor: pointer;
 }
-footer > button{
+.leftButton:hover{
+    width: 35px;
+    height: 35px;
+}
+.lastButton{
     position: absolute;
     bottom: 25px;
     right: 10px;
+    transition-property: transform;
+    transition-duration: 1s;
     padding: 9px 10px 5px;
+    background-color: transparent;
+}
+.lastButton:hover{
     background-color: rgba(19,57,23,1);
 }
-
-
 
 /* Responsive tablet */
 @media (max-width: 1023px) {
