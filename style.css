@@ -243,25 +243,20 @@ p{
         background: linear-gradient(188deg, rgba(77,149,89,1) 0%, rgba(56,112,61,1) 28.53%, rgba(19,57,23,1) 75.52%); 
         flex-wrap: wrap;
         flex-direction: column;
+        align-items: center;
         top: 100%;
         transform-origin: top;
         opacity: 0;
         visibility: hidden;
         transform: scaleY(0);
         transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
-        >*{
-            font-weight: normal;
-            justify-content: center;
-            padding: 2px 0 10px 5px;
-
-        }
         >.navRadiusTop{
             border: transparent 1px;
             border-bottom: 1px solid #999595f4;
             border-top-right-radius: 5px;
             border-top-left-radius: 5px;
             padding-bottom: 5px;
-
+            width: 50px;            
         }
         >.navRadiusBottom{
             border: transparent 1px;
@@ -269,8 +264,15 @@ p{
             border-bottom-left-radius: 5px;
         }
         >.navTable{
-            border-bottom: solid 1px #c0bdbdf4;
-            padding-bottom: 5px;
+            width: 15px;
+            border-bottom: solid 1px #c0bdbdf4;            padding-bottom: 5px;
+        }
+        >*{
+            font-weight: normal;
+            font-size: 14px;
+            justify-content: center;
+            padding: 5px 0 5px 5px;
+    
         }
     }
     .burgerIcon{
