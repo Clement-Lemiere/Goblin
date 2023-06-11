@@ -1,162 +1,184 @@
-/* General */
-@keyframes slide {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
+
+/* General and keyframes */
+
+    :root{
+    --primary: rgba(77,149,89,1);
+    --secondary: rgba(56,112,61,1);
+    --tertiary: rgba(19,57,23,1);
+    --white: #f4f4f4f4;
+    --grey: #999595f4;
+    background: linear-gradient(249deg, var(--primary) 0%, var(--secondary) 28.53%, var(--tertiary) 75.52%);
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
+
+    @keyframes slide {
+        from {
+        opacity: 0;
+        transform: translateY(-20px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        }
     }
-}
-a{
-    text-decoration: none;
-    color: #f4f4f4f4;
-}
-body{
-    margin: 10px;
-    color: white;
-    max-width: 1440px;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(249deg, rgba(77,149,89,1) 0%, rgba(56,112,61,1) 28.53%, rgba(19,57,23,1) 75.52%); 
-}
-h1{
-    font-family: Permanent Marker;
-    margin: 0;
-    font-size: 100px;
-}
-h4{
-    font-size: 20px;
-    margin: 0;
-}
-h5{
-    font-size: 18px;
-    margin: 10px 25px 0 0;
-    margin: 20px 0 40px;
-}
-/* HEADER */
+    a{
+        text-decoration: none;
+        color: var(--white);
+    }
+    body{
+        margin: 10px auto;
+        color: var(--white);
+        max-width: 1440px;
+        font-family: 'Roboto', sans-serif;
+    }
+    h1{
+        font-family: Permanent Marker;
+        margin: 0;
+        font-size: 100px;
+    }
+    h4{
+        font-size: 20px;
+        margin: 0;
+    }
+    h5{
+        font-size: 18px;
+        margin: 10px 25px 0 0;
+        margin: 20px 0 40px;
+    }
 
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 95vw;
-    height: 25px;
-    margin: 10px 25px 70px 0;
-    animation: slide 2s 0s;
-}
-.logo{
-    position: absolute;
-    width: 70px;
-    left: 20px;
-}
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 60vw;
-    font-size: 20px;
-    margin-top: 20px;
-}
-.navBar > span{
-    cursor: pointer;
-    font-weight: bold;
-    padding-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    height: 25px;
-}
-.navBar > span:hover{
-    border-bottom: solid 4px #f4f4f4f4;
-    font-size: 22px;
+/* HEADER: Logo and navbar */
 
-}
-button{
-    border: solid 1px white;
-    border-radius: 25px;
-    padding: 12px 25px 12px 20px;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-}
-button:hover{
-    border: none;
-    background-color: rgba(56,112,61,1);
-}
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100vw;
+        height: 25px;
+        margin: 10px 0 70px 0;
+        animation: slide 2s 0s;
+    }
+    .logo{
+        position: absolute;
+        width: 70px;
+        left: 20px;
+    }
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70vw;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .navBar > span{
+        cursor: pointer;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        height: 25px;
+    }
+    .navBar > span:hover{
+        border-bottom: solid 4px var(--white);
+        font-size: 22px;
+
+    }
 
 
-/* Main container */
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.intro{
-    margin-top: 50px;
-    margin-left: 80px;
-    width: 39vw;
-    animation: slide 2.5s 0.5s forwards;
-    visibility: hidden;
-}
-.buttons{
-    margin:20px 10px;
-    font-size: 18px;
-}
-.watchButton{
-    padding: 10px 25px 12px 15px;
-}
-p{
-    line-height: 5vh;
-    margin: 40px 0 20px; 
-}
-.goblin{
-    width: 44vw;
-    margin-right: 30px;
-    animation: slide 3s 1s forwards;
-    visibility: hidden;
-}
+/* Main container: block text and block image */
 
-.leftBanner{
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-left: -50px;
-    bottom: 115px;
-    height: 150px;
-    width: 70px;
-    justify-content: space-between;
-}
-.leftButton{
-    cursor: pointer;
-}
-.leftButton:hover{
-    width: 35px;
-    height: 35px;
-}
-.lastButton{
-    position: absolute;
-    bottom: 25px;
-    right: 10px;
-    transition-property: transform;
-    transition-duration: 1s;
-    padding: 9px 10px 5px;
-    background-color: transparent;
-}
-.lastButton:hover{
-    background-color: rgba(19,57,23,1);
-}
-.watchIcon{
-    margin-top: 4px;
-}
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 10vw;
+    }
+    .intro{
+        margin-top: 50px;
+        width: 39vw;
+        animation: slide 2.5s 0.5s forwards;
+        visibility: hidden;
+    }
+    p{
+        line-height: 5vh;
+        margin: 40px 0 20px;
+    }
+    .goblinImage{
+        width: 44vw;
+        animation: slide 3s 1s forwards;
+        visibility: hidden;
+    }
+
+/* Buttons config */
+
+    button{
+        border: solid 1px var(--white);
+        border-radius: 25px;
+        padding: 12px 25px 12px 20px;
+        background-color: transparent;
+        color: var(--white);
+        cursor: pointer;
+    }
+    button:hover{
+        border: none;
+        background-color: var(--secondary);
+        box-shadow: inset -4px -6px 7px var(--tertiary);
+    }
+    .buttons{
+        margin:20px 10px;
+        font-size: 18px;
+    }
+    .watchButton{
+        padding: 10px 25px 12px 15px;
+    }
+
+    .leftBanner{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: -50px;
+        bottom: 115px;
+        height: 150px;
+        width: 70px;
+        justify-content: space-between;
+    }
+    .leftButton{
+        cursor: pointer;
+    }
+    .leftButton:hover{
+        width: 35px;
+        height: 35px;
+    }
+    .watchIcon{
+        margin-top: 4px;
+    }
+    .lastButton{
+        position: absolute;
+        bottom: 25px;
+        right: 10px;
+        padding: 9px 10px 5px;
+        background-color: transparent;
+    }
+    .lastButton:hover{
+        background-color: var(--tertiary);
+    }
 
 /* Responsive tablet */
+
 @media (max-width: 1023px) {
-    .intro{
-        margin-top: 40px;
+
+/* Header */
+
+    nav{
+        font-size: 100%;
+    }
+
+/* Main Container */
+
+    main{
+        margin-top: 30px;
     }
     h1{
         font-size: 70px;
@@ -168,17 +190,12 @@ p{
         font-size: 15px;
         margin-top: 20px;
     }
-    nav{
-        font-size: 100%;
-    }
-    .goblin{
-        width: 300px;
+    .goblinImage{
+        width: 40vw;
+        margin-top: 30px;
     }
     p{
         margin: 30px 0 15px;
-    }
-    button {      
-        margin:18px 8px;
     }
     .buttons{
         margin:15px 7px;
@@ -194,18 +211,94 @@ p{
 }
 
 /* Responsive mobile */
+
 @media (max-width: 767px){
+    
+/* Header */
+    main{
+        margin: 0;
+    }
+    nav{
+        flex-direction: column;
+        width: 150px;
+        margin-right: 20px;
+    }
+    .navBar{
+        display: flex;
+        border: transparent 1px;
+        border-radius: 5px;
+        box-shadow: 2px -2px 8px var(--tertiary);
+        margin-top: 10px;
+        background: linear-gradient(188deg, var(--primary) 0%, var(--secondary) 28.53%, var(--tertiary) 75.52%);
+        flex-wrap: wrap;
+        flex-direction: column;
+        transform-origin: top;
+        visibility: hidden;
+        transform: scaleY(0);
+        transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+        >.navRadiusTop{
+            border: transparent 1px;
+            border-bottom: 1px solid var(--grey);
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            padding-bottom: 5px;
+        }
+        >.navRadiusBottom{
+            border: transparent 1px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        >.navTable{
+            border-bottom: solid 1px var(--grey);
+            padding-bottom: 5px;
+        }
+        >*{
+            font-weight: normal;
+            font-size: 14px;
+            justify-content: center;
+            padding: 5px;
+    
+        }
+    }
+    .burgerIcon{
+        display: flex;
+        margin: 0 20% 0 auto;
+        border: transparent 1px var(--tertiary);
+        border-radius: 5px;
+        box-shadow: 2px -2px 8px var(--tertiary);
+        padding: 0.5em 0.5em 0.3em;
+        flex-wrap: wrap;
+        flex-direction: column;
+        cursor: pointer;
+        width: 20px;
+        > span{
+            border-bottom: solid var(--white) 2px;
+            margin-bottom: 5px;
+            width: 22px;
+        }
+    }
+    .burgerIcon:hover ~.navBar{
+        /* animation: slide 1s 0s; */
+        z-index: 99;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+    .burgerIcon:hover ~.intro{
+    
+    }
+
+/* Main Container */
+
     .intro{
         width: 100%;
         margin: 0 2vw;
     }
-    .goblin{
-        width: 100%;
-        margin: 20px 5vw 0;
+    .goblinImage{
+        width: 95%;
+        margin-top: 20px;
     }
-    .leftBanner{
-        display: none;
-    }
+
+/* Buttons Config */
     .buttons{
         display: flex;
         flex-wrap: wrap;
@@ -224,76 +317,14 @@ p{
     .textButton{
         margin-top: 4px;
     }
-    footer{
-        display: none;        
-    }
-    nav{
-        flex-direction: column;
-        width: 120px;
-        margin-right: 15px;
-    }
-    .navBar{
-        display: flex;
-        border: transparent 1px;
-        border-radius: 5px;
-        box-shadow: 2px -2px 8px rgba(19,57,23,1);
-        width: 120px;
-        margin-right: 30px;
-        margin-top: 5px;
-        background: linear-gradient(188deg, rgba(77,149,89,1) 0%, rgba(56,112,61,1) 28.53%, rgba(19,57,23,1) 75.52%); 
-        flex-wrap: wrap;
-        flex-direction: column; 
-        transform-origin: top;
-        visibility: hidden;
-        transform: scaleY(0);
-        transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
-        >.navRadiusTop{
-            border: transparent 1px;
-            border-bottom: 1px solid #999595f4;
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
-            padding-bottom: 5px;
-        }
-        >.navRadiusBottom{
-            border: transparent 1px;
-            border-bottom-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-        >.navTable{
-            border-bottom: solid 1px #c0bdbdf4;            padding-bottom: 5px;
-        }
-        >*{
-            font-weight: normal;
-            font-size: 14px;
-            justify-content: center;
-            padding: 5px;
-    
-        }
-    }
-    .burgerIcon{
-        display: flex;
-        border: transparent 1px rgba(19,57,23,1);
-        border-radius: 5px;
-        box-shadow: 2px -2px 8px rgba(19,57,23,1);
-        padding: 0.5em 0.5em 0.3em;
-        flex-wrap: wrap;
-        flex-direction: column;
-        cursor: pointer;
-        width: 20px;
-        > span{
-            border-bottom: solid white 2px;
-            margin-bottom: 5px;
-            width: 22px;
-        }        
-    }
-    .burgerIcon:hover ~.navBar{
-        /* animation: slide 1s 0s; */
-        z-index: 99;
-        visibility: visible;
-        transform: scaleY(1);
-    }
-    .burgerIcon:hover ~.intro{
 
+/* Other */
+
+    .leftBanner{
+        display: none;
+    }
+    footer{
+        display: none;
     }
 }
 
@@ -307,7 +338,7 @@ p{
     justify-content: center;
     align-items: center;
     position: fixed;
-    background: linear-gradient(249deg, rgba(77,149,89,1) 0%, rgba(56,112,61,1) 28.53%, rgba(19,57,23,1) 75.52%); 
+    background: linear-gradient(249deg, rgba(77,149,89,1) 0%, rgba(56,112,61,1) 28.53%, rgba(19,57,23,1) 75.52%);
     height: 100%;
     inset: 0;
     z-index: 1;
@@ -326,7 +357,7 @@ p{
     animation: spin 0.7s linear;
     animation-iteration-count: 3;
   }
-  
+
   @keyframes disappear {
     to {
       transform: scale(0);
