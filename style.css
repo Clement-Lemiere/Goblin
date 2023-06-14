@@ -26,10 +26,60 @@
         color: var(--white);
     }
     body{
-        margin: 10px auto;
+        margin: 10px;
         color: var(--white);
         max-width: 1440px;
         font-family: 'Roboto', sans-serif;
+    }
+    
+    /* HEADER: Logo and navbar */
+    
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 25px;
+        margin-top: 10px;
+        animation: slide 2s 0s;
+    }
+    .logo{
+        width: 70px;
+    }
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70vw;
+        height: 50px;
+        font-size: 20px;  
+    }
+    .navBar > span{
+        cursor: pointer;
+        border-bottom: transparent 4px var(--white);
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        height: 25px;
+    }
+    .navBar > span:hover{
+        border-bottom: solid;
+        border-radius: 7px;
+    }
+
+
+/* Main container: bloc text and bloc image */
+
+    main{
+        display: flex;
+        margin-left: 70px;
+    }
+    .intro{
+        margin-top: 50px;
+        width: 45%;
+        animation: slide 2.5s 0.5s forwards;
+        visibility: hidden;
     }
     h1{
         font-family: Permanent Marker;
@@ -42,76 +92,29 @@
     }
     h5{
         font-size: 18px;
-        margin: 10px 25px 0 0;
-        margin: 20px 0 40px;
-    }
-
-/* HEADER: Logo and navbar */
-
-    header{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100vw;
-        height: 25px;
-        margin: 10px 0 70px 0;
-        animation: slide 2s 0s;
-    }
-    .logo{
-        position: absolute;
-        width: 70px;
-        left: 20px;
-    }
-    nav{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 70vw;
-        font-size: 20px;
-        margin-top: 20px;
-    }
-    .navBar > span{
-        cursor: pointer;
-        font-weight: bold;
-        padding-bottom: 10px;
-        margin-right: 10px;
-        margin-left: 10px;
-        height: 25px;
-    }
-    .navBar > span:hover{
-        border-bottom: solid 4px var(--white);
-        font-size: 22px;
-
-    }
-
-
-/* Main container: block text and block image */
-
-    main{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-left: 10vw;
-    }
-    .intro{
-        margin-top: 50px;
-        width: 39vw;
-        animation: slide 2.5s 0.5s forwards;
-        visibility: hidden;
+        padding: 40px 0;
+        margin: 0;
     }
     p{
         line-height: 5vh;
-        margin: 40px 0 20px;
+        padding: 40px 0 20px;
     }
     .goblinImage{
-        width: 44vw;
         animation: slide 3s 1s forwards;
         visibility: hidden;
+        margin-top: 40px;
+        > img{
+            width: 100%;
+        }
     }
 
 /* Buttons config */
-
+    .buttonSection{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
     button{
         border: solid 1px var(--white);
         border-radius: 25px;
@@ -123,26 +126,28 @@
     button:hover{
         border: none;
         background-color: var(--secondary);
-        box-shadow: inset -4px -6px 7px var(--tertiary);
+        box-shadow: inset -2px 5px 7px rgb(0, 22, 0);
     }
     .buttons{
-        margin:20px 10px;
         font-size: 18px;
     }
     .watchButton{
         padding: 10px 25px 12px 15px;
     }
-
     .leftBanner{
         position: absolute;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         margin-left: -50px;
-        bottom: 115px;
+        top: 215px;
         height: 150px;
         width: 70px;
         justify-content: space-between;
+    }
+    .buttonContainer{
+        width: 35px;
+        height: 35px;
     }
     .leftButton{
         cursor: pointer;
@@ -155,18 +160,18 @@
         margin-top: 4px;
     }
     .lastButton{
-        position: absolute;
-        bottom: 25px;
-        right: 10px;
         padding: 9px 10px 5px;
         background-color: transparent;
     }
     .lastButton:hover{
         background-color: var(--tertiary);
     }
-
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
 /* Responsive tablet */
-
 @media (max-width: 1023px) {
 
 /* Header */
@@ -188,28 +193,28 @@
     }
     h5{
         font-size: 15px;
-        margin-top: 20px;
-    }
-    .goblinImage{
-        width: 40vw;
-        margin-top: 30px;
     }
     p{
-        margin: 30px 0 15px;
+        line-height: 4vh;
+        padding: 40px 0 20px;
     }
+    /* Buttons */
     .buttons{
-        margin:15px 7px;
         font-size: 13px;
+    }
+    button{
+        padding: 9px 22px 9px 17px;
     }
     .watchButton{
         padding: 8px 20px 10px 12px;
     }
     .watchIcon{
-        height: 13px;
-        width: 13px;
+        >svg{
+            height: 15px;
+            width: 15px;
+        }
     }
 }
-
 /* Responsive mobile */
 
 @media (max-width: 767px){
@@ -219,13 +224,13 @@
         margin: 0;
     }
     nav{
-        flex-direction: column;
         width: 150px;
+        margin: 20px 20px 0 0;
         margin-right: 20px;
     }
     .navBar{
         display: flex;
-        border: transparent 1px;
+        border: transparent;
         border-radius: 5px;
         box-shadow: 2px -2px 8px var(--tertiary);
         margin-top: 10px;
@@ -266,29 +271,27 @@
         border: transparent 1px var(--tertiary);
         border-radius: 5px;
         box-shadow: 2px -2px 8px var(--tertiary);
-        padding: 0.5em 0.5em 0.3em;
+        padding: 11px 9px 4px 11px;
         flex-wrap: wrap;
         flex-direction: column;
         cursor: pointer;
-        width: 20px;
+        width: 25px;
         > span{
             border-bottom: solid var(--white) 2px;
-            margin-bottom: 5px;
+            margin-bottom: 7px;
             width: 22px;
         }
     }
     .burgerIcon:hover ~.navBar{
-        /* animation: slide 1s 0s; */
-        z-index: 99;
+        z-index: 999;
         visibility: visible;
         transform: scaleY(1);
     }
-    .burgerIcon:hover ~.intro{
-    
-    }
-
 /* Main Container */
-
+    main{
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
     .intro{
         width: 100%;
         margin: 0 2vw;
@@ -306,10 +309,8 @@
         margin: 0;
     }
     .buttonSection{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 90vw;
+        max-width: 400px;
+        margin: 0 auto;
     }
     .watchIcon{
         margin-top: 2px;
@@ -318,11 +319,14 @@
         margin-top: 4px;
     }
 
-/* Other */
+/* left banner */
 
     .leftBanner{
         display: none;
     }
+
+/* footer */
+
     footer{
         display: none;
     }
@@ -331,8 +335,9 @@
 
 
 
-/* LOADER*/
-/* .loader {
+/* LOADER
+
+.loader {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -367,4 +372,5 @@
     to {
       transform: rotate(360deg);
     }
-  }  */
+  }  
+  */
